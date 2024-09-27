@@ -1,0 +1,72 @@
+
+# Instalación y Uso de Samtools
+
+### 1. Extraer el archivo
+Si el archivo `samtools-1.19.2` está comprimido (por ejemplo, en formato `.tar.bz2` o `.tar.gz`), debes extraerlo primero.
+
+Para un archivo `.tar.bz2`, usa este comando:
+
+```bash
+tar -xvjf samtools-1.19.2.tar.bz2
+```
+
+Para un archivo `.tar.gz`, usa:
+
+```bash
+tar -xvzf samtools-1.19.2.tar.gz
+```
+
+### 2. Navegar a la carpeta de Samtools
+Después de extraer el archivo, entra a la carpeta recién creada:
+
+```bash
+cd samtools-1.19.2
+```
+
+### 3. Compilar e instalar Samtools
+
+1. **Configurar la compilación:**
+
+   ```bash
+   ./configure
+   ```
+
+   Si te muestra algún error, probablemente necesites instalar dependencias como las bibliotecas de desarrollo **zlib** y **ncurses**:
+
+   En sistemas **Debian/Ubuntu**, puedes instalar estas dependencias con:
+
+   ```bash
+   sudo apt-get install libz-dev libncurses5-dev
+   ```
+
+2. **Compilar Samtools:**
+
+   ```bash
+   make
+   ```
+
+3. **Instalar Samtools:**
+
+   ```bash
+   sudo make install
+   ```
+
+### 4. Verificar la instalación
+Después de la instalación, asegúrate de que **Samtools** esté disponible:
+
+```bash
+samtools --version
+```
+
+### 5. Usar Samtools
+Una vez instalado, puedes usar **Samtools** con comandos como:
+
+```bash
+samtools view archivo.bam
+```
+
+o para obtener ayuda sobre sus comandos:
+
+```bash
+samtools help
+```
